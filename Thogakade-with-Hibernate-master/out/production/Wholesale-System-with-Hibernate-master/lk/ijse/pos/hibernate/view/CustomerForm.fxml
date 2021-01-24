@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="385.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.hibernate.controller.CustomerFormController">
+   <children>
+      <Label layoutX="203.0" layoutY="10.0" text="Customer Form">
+         <font>
+            <Font name="Ubuntu Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="53.0" prefHeight="6.0" prefWidth="620.0" />
+      <JFXTextField fx:id="txtId" focusColor="WHITE" labelFloat="true" layoutX="53.0" layoutY="71.0" prefHeight="26.0" prefWidth="214.0" promptText="Customer ID" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" focusColor="WHITE" labelFloat="true" layoutX="353.0" layoutY="71.0" prefHeight="26.0" prefWidth="214.0" promptText="Name" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="WHITE" labelFloat="true" layoutX="53.0" layoutY="119.0" prefHeight="26.0" prefWidth="214.0" promptText="Address" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSalary" focusColor="WHITE" labelFloat="true" layoutX="353.0" layoutY="119.0" prefHeight="26.0" prefWidth="214.0" promptText="Salary" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="44.0" layoutY="167.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="237.0" style="-fx-background-color: #2ecc71;" text="SAVE" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="380.0" layoutY="167.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="225.0" style="-fx-background-color: #e74c3c;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="12.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="29.0">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Ubuntu Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCustomer" layoutX="45.0" layoutY="216.0" prefHeight="155.0" prefWidth="566.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="113.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="117.0" text="Address" />
+            <TableColumn fx:id="colSalary" prefWidth="156.0" text="Salary" />
+            <TableColumn fx:id="colOperate" prefWidth="104.0" text="Operate" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
